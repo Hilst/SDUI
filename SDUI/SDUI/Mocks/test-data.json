@@ -1,0 +1,68 @@
+{
+    "screenName": "test-data",
+    "templates": [
+        {
+            "id": "primeiro-template",
+            "type": "zero",
+            "order": 1,
+            "componentsId": [
+                {
+                    "id": "primeiro-componente",
+                    "order": 1
+                },
+                {
+                    "id": "segundo-component",
+                    "order": 2
+                }
+            ]
+        },
+        {
+            "id": "segundo-template",
+            "type": "one",
+            "order": 2,
+            "componentsId": [
+                {
+                    "id": "terceiro-componente",
+                    "order": 1
+                }
+            ]
+        }
+    ],
+    "components": [
+        {
+            "id": "primeiro-componente",
+            "type": "zero",
+            "bodyId": "primeiro-corpo"
+        },
+        {
+            "id": "segundo-component",
+            "type": "one",
+            "bodyId": "segundo-corpo"
+        },
+        {
+            "id": "terceiro-componente",
+            "type": "two",
+            "bodyId": "terceiro-corpo"
+        }
+    ],
+    "body": [
+        {
+            "id": "primeiro-corpo",
+            "body": {
+                "nome": "A"
+            }
+        },
+        {
+            "id": "segundo-corpo",
+            "body": {
+                "nome": "B"
+            }
+        },
+        {
+            "id": "terceiro-corpo",
+            "body": {
+                "nome": "C"
+            }
+        }
+    ]
+}
