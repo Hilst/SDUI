@@ -44,10 +44,14 @@ The JSON object that is received has the following format:
                     "id": "<component-id>",
                     "order": 1
                 },
-                ...
+                {
+                    "...": "..."
+                }
             ]
         },
-        ...
+        {
+            "...": "..."
+        }
     ],
     "components": [
         {
@@ -55,17 +59,21 @@ The JSON object that is received has the following format:
             "type": "<component-type>",
             "bodyId": "<body-id>"
         },
-        ...
+        {
+            "...": "..."
+        }
     ],
     "body": [
         {
             "id": "<body-id>",
             "body": {
                 "<body-key>": "<body-key-value>",
-                ... 
+                "...": "..." 
             }
         },
-        ...
+        {
+            "...": "..."
+        }
     ]
 }
 ```
