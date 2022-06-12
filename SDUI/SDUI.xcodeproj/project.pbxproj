@@ -25,7 +25,6 @@
 		12E3C84F2847A4B800E7F06E /* ScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8342847A4B800E7F06E /* ScreenLogger.swift */; };
 		12E3C8502847A4B800E7F06E /* ScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8362847A4B800E7F06E /* ScreenBuilder.swift */; };
 		12E3C8512847A4B800E7F06E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8372847A4B800E7F06E /* Service.swift */; };
-		12E3C8522847A4B800E7F06E /* SDUIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8382847A4B800E7F06E /* SDUIInterface.swift */; };
 		12E3C8532847A4B800E7F06E /* test-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 12E3C83A2847A4B800E7F06E /* test-data.json */; };
 		12E3C8542847A4B800E7F06E /* ComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C83C2847A4B800E7F06E /* ComponentModel.swift */; };
 		12E3C8552847A4B800E7F06E /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C83D2847A4B800E7F06E /* ScreenModel.swift */; };
@@ -43,7 +42,6 @@
 		12E3C8742847A4CC00E7F06E /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8642847A4CC00E7F06E /* StringTest.swift */; };
 		12E3C8752847A4CC00E7F06E /* ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8662847A4CC00E7F06E /* ServiceTest.swift */; };
 		12E3C8762847A4CC00E7F06E /* ScreenBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8672847A4CC00E7F06E /* ScreenBuilderTest.swift */; };
-		12E3C8772847A4CC00E7F06E /* SDUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8682847A4CC00E7F06E /* SDUITest.swift */; };
 		12E3C8782847A4CC00E7F06E /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C86A2847A4CC00E7F06E /* RouterTest.swift */; };
 		12E3C8792847A4CC00E7F06E /* RouteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C86B2847A4CC00E7F06E /* RouteTest.swift */; };
 		12E3C87A2847A4CC00E7F06E /* ProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C86E2847A4CC00E7F06E /* ProviderMock.swift */; };
@@ -83,7 +81,6 @@
 		12E3C8342847A4B800E7F06E /* ScreenLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLogger.swift; sourceTree = "<group>"; };
 		12E3C8362847A4B800E7F06E /* ScreenBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBuilder.swift; sourceTree = "<group>"; };
 		12E3C8372847A4B800E7F06E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		12E3C8382847A4B800E7F06E /* SDUIInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDUIInterface.swift; sourceTree = "<group>"; };
 		12E3C83A2847A4B800E7F06E /* test-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-data.json"; sourceTree = "<group>"; };
 		12E3C83C2847A4B800E7F06E /* ComponentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentModel.swift; sourceTree = "<group>"; };
 		12E3C83D2847A4B800E7F06E /* ScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
@@ -101,7 +98,6 @@
 		12E3C8642847A4CC00E7F06E /* StringTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
 		12E3C8662847A4CC00E7F06E /* ServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTest.swift; sourceTree = "<group>"; };
 		12E3C8672847A4CC00E7F06E /* ScreenBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBuilderTest.swift; sourceTree = "<group>"; };
-		12E3C8682847A4CC00E7F06E /* SDUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDUITest.swift; sourceTree = "<group>"; };
 		12E3C86A2847A4CC00E7F06E /* RouterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 		12E3C86B2847A4CC00E7F06E /* RouteTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTest.swift; sourceTree = "<group>"; };
 		12E3C86E2847A4CC00E7F06E /* ProviderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderMock.swift; sourceTree = "<group>"; };
@@ -175,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				12E3C8672847A4CC00E7F06E /* ScreenBuilderTest.swift */,
-				12E3C8682847A4CC00E7F06E /* SDUITest.swift */,
 				128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */,
 			);
 			path = Module;
@@ -414,7 +409,6 @@
 		12E3C88B284830B500E7F06E /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				12E3C8382847A4B800E7F06E /* SDUIInterface.swift */,
 				12E3C8362847A4B800E7F06E /* ScreenBuilder.swift */,
 				12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */,
 			);
@@ -539,7 +533,6 @@
 				120FBC32284E55250032C921 /* Linker.swift in Sources */,
 				12E3C8502847A4B800E7F06E /* ScreenBuilder.swift in Sources */,
 				12E3C85D2847A4B800E7F06E /* ComponentCoder.swift in Sources */,
-				12E3C8522847A4B800E7F06E /* SDUIInterface.swift in Sources */,
 				12E3C85E2847A4B800E7F06E /* ScreenCoder.swift in Sources */,
 				12E3C84C2847A4B800E7F06E /* Template.swift in Sources */,
 				12E3C85F2847A4B800E7F06E /* String+.swift in Sources */,
@@ -574,7 +567,6 @@
 				12E3C8742847A4CC00E7F06E /* StringTest.swift in Sources */,
 				12E3C88F2848349200E7F06E /* ArrayTest.swift in Sources */,
 				12E3C87A2847A4CC00E7F06E /* ProviderMock.swift in Sources */,
-				12E3C8772847A4CC00E7F06E /* SDUITest.swift in Sources */,
 				12E3C8762847A4CC00E7F06E /* ScreenBuilderTest.swift in Sources */,
 				12E3C8732847A4CC00E7F06E /* StackTests.swift in Sources */,
 				122726352855466D0041B121 /* LinkerMock.swift in Sources */,

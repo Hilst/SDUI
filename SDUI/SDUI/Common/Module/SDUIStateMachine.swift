@@ -22,7 +22,7 @@ public final class SDUIStateMachine {
     private let stateSubject: PassthroughSubject<State, Never>
     public let statePublisher: AnyPublisher<State, Never>
 
-    init(initialState: State) {
+    public init(initialState: State) {
         self.state = initialState
         self.stateSubject = PassthroughSubject<State, Never>()
         self.statePublisher = stateSubject.eraseToAnyPublisher()

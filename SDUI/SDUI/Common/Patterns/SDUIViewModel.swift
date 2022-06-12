@@ -13,8 +13,11 @@ public final class SDUIViewModel: ObservableObject {
         willSet { leave(state: state) }
         didSet { enter(state: state) }
     }
-
     @Published public var templates = [Template]()
+
+    public var route: Route {
+        router.current()
+    }
 
     // MARK: - BUSINESS PROP
     private let router: Router
@@ -24,7 +27,7 @@ public final class SDUIViewModel: ObservableObject {
     private var screenModel: ScreenModel?
 
     // MARK: - INITIALIZER
-    init(router: Router,
+    public init(initalRoute: Route,
          provider: ProviderProtocol,
          linker: Linker,
          stateMachine: SDUIStateMachine = SDUIStateMachine(initialState: .start)) {
@@ -32,7 +35,7 @@ public final class SDUIViewModel: ObservableObject {
         self.stateMachine = stateMachine
         self.state = stateMachine.state
 
-        self.router = router
+        self.router = Router(initialRoute: initalRoute)
         self.service = Service(provider: provider)
         self.linker = linker
 

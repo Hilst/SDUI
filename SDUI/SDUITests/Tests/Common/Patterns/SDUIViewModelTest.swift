@@ -4,18 +4,16 @@ import XCTest
 class SDUIViewModelTest: XCTestCase {
 
     var sut: SDUIViewModel!
-    var router: Router!
     var provider: ProviderMock!
     var linker: Linker!
     var stateMachine: SDUIStateMachine!
 
     override func setUp() {
-        router = Router(initialRoute: .init(rawValue: "view-model-test"))
         provider = ProviderMock()
         linker = LinkerMock()
         stateMachine = SDUIStateMachine(initialState: .start)
 
-        sut = SDUIViewModel(router: router,
+        sut = SDUIViewModel(initalRoute: .init(rawValue: "view-model-test"),
                             provider: provider,
                             linker: linker,
                             stateMachine: stateMachine)
@@ -26,7 +24,6 @@ class SDUIViewModelTest: XCTestCase {
         stateMachine = nil
         linker = nil
         provider = nil
-        router = nil
     }
 
     func test_happy_flux() {
@@ -59,11 +56,11 @@ class SDUIViewModelTest: XCTestCase {
     }
     
     func test_routing() {
-        XCTAssertEqual(router.current().rawValue, "view-model-test")
+        XCTAssertEqual(sut.route.rawValue, "view-model-test")
         sut.goto(route: .init(rawValue: "view-model-test-2"))
-        XCTAssertEqual(router.current().rawValue, "view-model-test-2")
+        XCTAssertEqual(sut.route.rawValue, "view-model-test-2")
         sut.goBack()
-        XCTAssertEqual(router.current().rawValue, "view-model-test")
+        XCTAssertEqual(sut.route.rawValue, "view-model-test")
     }
 
 

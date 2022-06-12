@@ -31,9 +31,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
 
     static let provider = Provider()
-    static let sdui = SDUIInterface(provider: provider, initialRoute: .init(rawValue: "lista"), linker: SampleLinker())
+    static let viewModel = SDUIViewModel(initalRoute: .init(rawValue: "lista"),
+                                         provider: provider,
+                                         linker: SampleLinker())
 
     static var previews: some View {
-        ContentView(viewModel: sdui.viewModel())
+        ContentView(viewModel: viewModel)
     }
 }
