@@ -13,6 +13,7 @@
 		1227263F285548C20041B121 /* service-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1227263E285548C20041B121 /* service-test.json */; };
 		1227264628556B2F0041B121 /* view-model-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1227264528556B2F0041B121 /* view-model-test.json */; };
 		12272648285575720041B121 /* view-model-load-failure-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 12272647285575720041B121 /* view-model-load-failure-test.json */; };
+		1227264B285581BB0041B121 /* TemplateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227264A285581BB0041B121 /* TemplateTest.swift */; };
 		128E904A285244AE0001BB6E /* SDUIStateMachineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */; };
 		12DF35DD28517A2C001F67E2 /* SDUIStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */; };
 		12DF35E42851937E001F67E2 /* ViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35E32851937E001F67E2 /* ViewTest.swift */; };
@@ -68,6 +69,7 @@
 		1227263E285548C20041B121 /* service-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "service-test.json"; sourceTree = "<group>"; };
 		1227264528556B2F0041B121 /* view-model-test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "view-model-test.json"; sourceTree = "<group>"; };
 		12272647285575720041B121 /* view-model-load-failure-test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "view-model-load-failure-test.json"; sourceTree = "<group>"; };
+		1227264A285581BB0041B121 /* TemplateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTest.swift; sourceTree = "<group>"; };
 		128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIStateMachineTest.swift; sourceTree = "<group>"; };
 		12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIStateMachine.swift; sourceTree = "<group>"; };
 		12DF35E32851937E001F67E2 /* ViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTest.swift; sourceTree = "<group>"; };
@@ -157,6 +159,14 @@
 				12E3C8712847A4CC00E7F06E /* screen-builder-test.json */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		122726492855808D0041B121 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1227264A285581BB0041B121 /* TemplateTest.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		128E9046285244550001BB6E /* Patterns */ = {
@@ -336,6 +346,7 @@
 		12E3C8652847A4CC00E7F06E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				122726492855808D0041B121 /* Classes */,
 				128E9048285244850001BB6E /* Patterns */,
 				128E9047285244770001BB6E /* Module */,
 			);
@@ -561,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12DF35E42851937E001F67E2 /* ViewTest.swift in Sources */,
+				1227264B285581BB0041B121 /* TemplateTest.swift in Sources */,
 				128E904A285244AE0001BB6E /* SDUIStateMachineTest.swift in Sources */,
 				12E3C8792847A4CC00E7F06E /* RouteTest.swift in Sources */,
 				12272631285544540041B121 /* SDUIViewModelTest.swift in Sources */,

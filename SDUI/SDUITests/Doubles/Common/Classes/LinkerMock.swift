@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 import SDUI
 
 final class LinkerMock: Linker {
@@ -11,9 +11,14 @@ final class LinkerMock: Linker {
     }
 }
 
-final class TemplateLinked: Template { }
+final class TemplateLinked: Template {
+    override func buildView() -> AnyView {
+        _ = super.buildView()
+        return AnyView(Text("test"))
+    }
+}
 extension TemplateType {
-    static let test = ComponentType(rawValue: "test")
+    static let test = TemplateType(rawValue: "test")
 }
 
 final class ComponentLinked: Component { }
