@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		120FBC32284E55250032C921 /* Linker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120FBC31284E55250032C921 /* Linker.swift */; };
+		12272631285544540041B121 /* SDUIViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12272630285544540041B121 /* SDUIViewModelTest.swift */; };
+		122726352855466D0041B121 /* LinkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122726342855466D0041B121 /* LinkerMock.swift */; };
+		1227263F285548C20041B121 /* service-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1227263E285548C20041B121 /* service-test.json */; };
+		1227264628556B2F0041B121 /* view-model-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1227264528556B2F0041B121 /* view-model-test.json */; };
+		12272648285575720041B121 /* view-model-load-failure-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 12272647285575720041B121 /* view-model-load-failure-test.json */; };
 		128E904A285244AE0001BB6E /* SDUIStateMachineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */; };
 		12DF35DD28517A2C001F67E2 /* SDUIStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */; };
 		12DF35E42851937E001F67E2 /* ViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35E32851937E001F67E2 /* ViewTest.swift */; };
@@ -43,7 +48,6 @@
 		12E3C8792847A4CC00E7F06E /* RouteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C86B2847A4CC00E7F06E /* RouteTest.swift */; };
 		12E3C87A2847A4CC00E7F06E /* ProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C86E2847A4CC00E7F06E /* ProviderMock.swift */; };
 		12E3C87B2847A4CC00E7F06E /* screen-builder-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 12E3C8712847A4CC00E7F06E /* screen-builder-test.json */; };
-		12E3C87C2847A4CC00E7F06E /* service-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 12E3C8722847A4CC00E7F06E /* service-test.json */; };
 		12E3C88628482D5500E7F06E /* SDUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C88528482D5500E7F06E /* SDUIViewModel.swift */; };
 		12E3C88D2848328D00E7F06E /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C88C2848328D00E7F06E /* Array+.swift */; };
 		12E3C88F2848349200E7F06E /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C88E2848349200E7F06E /* ArrayTest.swift */; };
@@ -61,6 +65,11 @@
 
 /* Begin PBXFileReference section */
 		120FBC31284E55250032C921 /* Linker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linker.swift; sourceTree = "<group>"; };
+		12272630285544540041B121 /* SDUIViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIViewModelTest.swift; sourceTree = "<group>"; };
+		122726342855466D0041B121 /* LinkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerMock.swift; sourceTree = "<group>"; };
+		1227263E285548C20041B121 /* service-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "service-test.json"; sourceTree = "<group>"; };
+		1227264528556B2F0041B121 /* view-model-test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "view-model-test.json"; sourceTree = "<group>"; };
+		12272647285575720041B121 /* view-model-load-failure-test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "view-model-load-failure-test.json"; sourceTree = "<group>"; };
 		128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIStateMachineTest.swift; sourceTree = "<group>"; };
 		12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIStateMachine.swift; sourceTree = "<group>"; };
 		12DF35E32851937E001F67E2 /* ViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTest.swift; sourceTree = "<group>"; };
@@ -97,7 +106,6 @@
 		12E3C86B2847A4CC00E7F06E /* RouteTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTest.swift; sourceTree = "<group>"; };
 		12E3C86E2847A4CC00E7F06E /* ProviderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderMock.swift; sourceTree = "<group>"; };
 		12E3C8712847A4CC00E7F06E /* screen-builder-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "screen-builder-test.json"; sourceTree = "<group>"; };
-		12E3C8722847A4CC00E7F06E /* service-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "service-test.json"; sourceTree = "<group>"; };
 		12E3C88528482D5500E7F06E /* SDUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIViewModel.swift; sourceTree = "<group>"; };
 		12E3C88C2848328D00E7F06E /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		12E3C88E2848349200E7F06E /* ArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTest.swift; sourceTree = "<group>"; };
@@ -122,6 +130,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12272632285545580041B121 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		122726332855465C0041B121 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				122726342855466D0041B121 /* LinkerMock.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		12272640285548C50041B121 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				1227263E285548C20041B121 /* service-test.json */,
+				1227264528556B2F0041B121 /* view-model-test.json */,
+				12272647285575720041B121 /* view-model-load-failure-test.json */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		12272641285548CE0041B121 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				12E3C8712847A4CC00E7F06E /* screen-builder-test.json */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		128E9046285244550001BB6E /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				12E3C8662847A4CC00E7F06E /* ServiceTest.swift */,
+				12272630285544540041B121 /* SDUIViewModelTest.swift */,
 			);
 			path = Patterns;
 			sourceTree = "<group>";
@@ -325,6 +367,8 @@
 		12E3C86D2847A4CC00E7F06E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				122726332855465C0041B121 /* Classes */,
+				12272632285545580041B121 /* Module */,
 				128E9046285244550001BB6E /* Patterns */,
 			);
 			path = Common;
@@ -341,8 +385,8 @@
 		12E3C8702847A4CC00E7F06E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				12E3C8712847A4CC00E7F06E /* screen-builder-test.json */,
-				12E3C8722847A4CC00E7F06E /* service-test.json */,
+				12272641285548CE0041B121 /* Module */,
+				12272640285548C50041B121 /* Patterns */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -478,8 +522,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12272648285575720041B121 /* view-model-load-failure-test.json in Resources */,
+				1227264628556B2F0041B121 /* view-model-test.json in Resources */,
 				12E3C87B2847A4CC00E7F06E /* screen-builder-test.json in Resources */,
-				12E3C87C2847A4CC00E7F06E /* service-test.json in Resources */,
+				1227263F285548C20041B121 /* service-test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,12 +570,14 @@
 				12DF35E42851937E001F67E2 /* ViewTest.swift in Sources */,
 				128E904A285244AE0001BB6E /* SDUIStateMachineTest.swift in Sources */,
 				12E3C8792847A4CC00E7F06E /* RouteTest.swift in Sources */,
+				12272631285544540041B121 /* SDUIViewModelTest.swift in Sources */,
 				12E3C8742847A4CC00E7F06E /* StringTest.swift in Sources */,
 				12E3C88F2848349200E7F06E /* ArrayTest.swift in Sources */,
 				12E3C87A2847A4CC00E7F06E /* ProviderMock.swift in Sources */,
 				12E3C8772847A4CC00E7F06E /* SDUITest.swift in Sources */,
 				12E3C8762847A4CC00E7F06E /* ScreenBuilderTest.swift in Sources */,
 				12E3C8732847A4CC00E7F06E /* StackTests.swift in Sources */,
+				122726352855466D0041B121 /* LinkerMock.swift in Sources */,
 				12E3C8782847A4CC00E7F06E /* RouterTest.swift in Sources */,
 				12E3C8752847A4CC00E7F06E /* ServiceTest.swift in Sources */,
 			);

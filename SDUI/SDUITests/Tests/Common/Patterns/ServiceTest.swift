@@ -19,9 +19,9 @@ final class ServiceTest: XCTestCase {
 
     func test_request() {
 
-        let out = sut.get(screenName: "service-test")
+        let out = sut.get(screenName: "service-test")!
 
-        XCTAssertTrue(providerMock.requestWasCalled)
+        XCTAssertEqual(providerMock.requestWasCalled, 1)
 
         ScreenLogger.log(out)
 
@@ -44,12 +44,7 @@ final class ServiceTest: XCTestCase {
 
         let out = sut.get(screenName: "wrong-name")
 
-        XCTAssertTrue(providerMock.requestWasCalled)
-
-        ScreenLogger.log(out)
-
-        XCTAssertEqual(out.screenName, "empty-screen")
-
-        XCTAssertTrue(out.templates.isEmpty)
+        XCTAssertEqual(providerMock.requestWasCalled, 1)
+        XCTAssertNil(out)
     }
 }

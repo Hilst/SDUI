@@ -1,6 +1,6 @@
 import SwiftUI
 
-final class Router: ObservableObject {
+final class Router {
 
     private let navigation: Stack<Route>
     private let initialRoute: Route

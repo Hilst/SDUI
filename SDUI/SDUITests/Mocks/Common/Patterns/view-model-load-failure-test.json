@@ -1,0 +1,16 @@
+{
+    "screenName": "test-data",
+    "templates": [
+        {
+            "id": "template",
+            "type": "zero",
+            "order": 1,
+/* --------- FAILURE ------------ */
+        {
+            "id": "corpo",
+            "body": {
+                "nome": "A"
+            }
+        }
+    ]
+}

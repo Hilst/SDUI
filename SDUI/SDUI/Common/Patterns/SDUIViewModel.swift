@@ -4,7 +4,6 @@ import Combine
 // MARK: - PROPERTIES and INITIALIZER
 public final class SDUIViewModel: ObservableObject {
 
-
     // MARK: - STATE MACHINE PROP
     private let stateMachine: SDUIStateMachine
 
@@ -53,9 +52,6 @@ public final class SDUIViewModel: ObservableObject {
 extension SDUIViewModel {
     private func enter(state: SDUIStateMachine.State) {
         switch state {
-        case .start:
-            send(event: .initiate)
-            break
         case .fetch:
             let current = router.current()
             screenModel = fetch(route: current)
@@ -65,8 +61,6 @@ extension SDUIViewModel {
             if let model = screenModel {
                 screen.load(model: model)
                 send(event: (screen.templates.isEmpty ? .failure : .success))
-            } else {
-                send(event: .failure)
             }
             break
         case .present:
@@ -78,6 +72,9 @@ extension SDUIViewModel {
 
     private func leave(state: SDUIStateMachine.State) {
         switch state {
+        case .present:
+            templates = []
+            break
         default: break
         }
     }

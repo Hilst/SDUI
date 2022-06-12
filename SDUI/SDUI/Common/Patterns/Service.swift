@@ -7,18 +7,13 @@ public protocol ProviderProtocol: AnyObject {
 final class Service {
     private let provider: ProviderProtocol
 
-    private lazy var emptyScreen: ScreenModel = {
-        ScreenModel(screenName: "empty-screen",
-                    templates: [])
-    }()
-
     init(provider: ProviderProtocol) {
         self.provider = provider
     }
 
-    func get(screenName: String) -> ScreenModel {
+    func get(screenName: String) -> ScreenModel? {
 
-        var screen: ScreenModel!
+        var screen: ScreenModel?
 
         provider.request(screenName: screenName) { result, status in
 
@@ -32,6 +27,6 @@ final class Service {
                 print(error.localizedDescription)
             }
         }
-        return screen ?? emptyScreen
+        return screen
     }
 }

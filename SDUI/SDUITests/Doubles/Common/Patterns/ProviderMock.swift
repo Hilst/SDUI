@@ -2,10 +2,10 @@ import Foundation
 import SDUI
 
 final class ProviderMock: ProviderProtocol {
-    var requestWasCalled = false
+    var requestWasCalled = 0
 
     func request(screenName: String, completion: @escaping ((Result<Data?, Error>, Int) -> Void)) {
-        requestWasCalled = true
+        requestWasCalled += 1
 
         var result: Result<Data?, Error>
 
