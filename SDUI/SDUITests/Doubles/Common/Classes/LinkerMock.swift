@@ -11,17 +11,24 @@ final class LinkerMock: Linker {
     }
 }
 
+
+// MARK: - TEMPLATE LINKED IN MOCK
+
 final class TemplateLinked: Template {
     override func buildView() -> AnyView {
         _ = super.buildView()
-        return AnyView(Text("test"))
+        return Text("test").id("#test").toAnyView()
     }
 }
+
 extension TemplateType {
     static let test = TemplateType(rawValue: "test")
 }
 
+// MARK: - COMPONENT LINKED IN MOCK
+
 final class ComponentLinked: Component { }
+
 extension ComponentType {
     static let test = ComponentType(rawValue: "test")
 }
