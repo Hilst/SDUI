@@ -130,13 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12272632285545580041B121 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
 		122726332855465C0041B121 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				122726332855465C0041B121 /* Classes */,
-				12272632285545580041B121 /* Module */,
 				128E9046285244550001BB6E /* Patterns */,
 			);
 			path = Common;

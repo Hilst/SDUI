@@ -13,8 +13,10 @@ class TemplateTest: XCTestCase {
 
         let data = ["test": "test"]
         let body = BodyModel(id: "body", data: data)
-        let component = ComponentModel(id: "component", type: .test, body: body)
-        let template = TemplateModel(id: "template", type: .test, components: [component])
+        var components: [ComponentModel] = []
+        components.append(ComponentModel(id: "component-1", type: .test, body: body))
+        components.append(ComponentModel(id: "component-2", type: .test, body: body))
+        let template = TemplateModel(id: "template", type: .test, components: components)
         sut = linker.initializer(for: template)
         sut.linker = linker
     }
@@ -52,5 +54,26 @@ class TemplateTest: XCTestCase {
             .isAbsent
 
         XCTAssertFalse(emptyViewIsAbsent)
+    }
+
+    // MARK: - TEST FOR EQUATABLE
+    func test_equatable_when_equal() {
+
+        let modelLHS = TemplateModel(id: "equal", type: .test, components: [])
+        let templateLHS = Template(model: modelLHS)
+        let modelRHS = TemplateModel(id: "equal", type: .test, components: [])
+        let templateRHS = Template(model: modelRHS)
+
+        XCTAssertTrue(templateLHS == templateRHS)
+    }
+
+    func test_equatable_when_not_equal() {
+
+        let modelLHS = TemplateModel(id: "LHS", type: .test, components: [])
+        let templateLHS = Template(model: modelLHS)
+        let modelRHS = TemplateModel(id: "RHS", type: .test, components: [])
+        let templateRHS = Template(model: modelRHS)
+
+        XCTAssertFalse(templateLHS == templateRHS)
     }
 }
