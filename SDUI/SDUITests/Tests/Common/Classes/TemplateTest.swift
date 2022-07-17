@@ -1,5 +1,6 @@
 import XCTest
 import SwiftUI
+import ViewInspector
 @testable import SDUI
 
 class TemplateTest: XCTestCase {
@@ -14,7 +15,7 @@ class TemplateTest: XCTestCase {
         let body = BodyModel(id: "body", data: data)
         let component = ComponentModel(id: "component", type: .test, body: body)
         let template = TemplateModel(id: "template", type: .test, components: [component])
-        sut = Template(model: template)
+        sut = linker.initializer(for: template)
         sut.linker = linker
     }
 
@@ -31,5 +32,25 @@ class TemplateTest: XCTestCase {
     func test_load() {
         sut.load()
         XCTAssertFalse(sut.components.isEmpty)
+    }
+
+    func test_render() throws {
+        sut.load()
+        let testableViewIsAbsent = try sut.render()
+            .inspect()
+            .anyView()
+            .view(TestableView.self)
+            .isAbsent
+
+        XCTAssertFalse(testableViewIsAbsent)
+    }
+
+    func test_render_without_loading() throws {
+        let emptyViewIsAbsent = try sut.render()
+            .inspect()
+            .view(EmptyView.self)
+            .isAbsent
+
+        XCTAssertFalse(emptyViewIsAbsent)
     }
 }

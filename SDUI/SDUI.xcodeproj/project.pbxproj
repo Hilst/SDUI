@@ -14,6 +14,7 @@
 		1227264628556B2F0041B121 /* view-model-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1227264528556B2F0041B121 /* view-model-test.json */; };
 		12272648285575720041B121 /* view-model-load-failure-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 12272647285575720041B121 /* view-model-load-failure-test.json */; };
 		1227264B285581BB0041B121 /* TemplateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227264A285581BB0041B121 /* TemplateTest.swift */; };
+		12537E492884994300AAB6C6 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 12537E482884994300AAB6C6 /* ViewInspector */; };
 		128E904A285244AE0001BB6E /* SDUIStateMachineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */; };
 		12DF35DD28517A2C001F67E2 /* SDUIStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */; };
 		12DF35E42851937E001F67E2 /* ViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35E32851937E001F67E2 /* ViewTest.swift */; };
@@ -122,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12E3C8212847A23000E7F06E /* SDUI.framework in Frameworks */,
+				12537E492884994300AAB6C6 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +474,9 @@
 				12E3C8232847A23000E7F06E /* PBXTargetDependency */,
 			);
 			name = SDUITests;
+			packageProductDependencies = (
+				12537E482884994300AAB6C6 /* ViewInspector */,
+			);
 			productName = SDUITests;
 			productReference = 12E3C81D2847A22F00E7F06E /* SDUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -504,6 +509,9 @@
 				Base,
 			);
 			mainGroup = 12E3C8052847A21800E7F06E;
+			packageReferences = (
+				12537E472884994300AAB6C6 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 12E3C8102847A21800E7F06E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -842,6 +850,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12537E472884994300AAB6C6 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12537E482884994300AAB6C6 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12537E472884994300AAB6C6 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 12E3C8062847A21800E7F06E /* Project object */;
 }
