@@ -1,5 +1,6 @@
 import SwiftUI
 import SDUI
+import ViewInspector
 
 final class LinkerMock: Linker {
     func initializer(for model: TemplateModel) -> Template {
@@ -17,7 +18,7 @@ final class LinkerMock: Linker {
 final class TemplateLinked: Template {
     override func buildView() -> AnyView {
         _ = super.buildView()
-        return Text("test").id("#test").toAnyView()
+        return TestableView().toAnyView()
     }
 }
 
@@ -32,3 +33,16 @@ final class ComponentLinked: Component { }
 extension ComponentType {
     static let test = ComponentType(rawValue: "test")
 }
+
+// MARK: - TESTABLE VIEW
+
+struct TestableView: View {
+    var body: some View {
+        Text("#test")
+    }
+}
+
+
+// MARK: - INSPECTABLE CONFORMS
+extension TestableView: Inspectable { }
+extension EmptyView: Inspectable { }
