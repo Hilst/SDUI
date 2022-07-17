@@ -14,11 +14,16 @@ struct CardView: View {
             Text("\(number)")
                 .font(.title3)
         }
-        .padding()
+        .padding(.horizontal, 50)
+        .padding(.vertical, 20)
         .frame(maxWidth: .infinity,
-               minHeight: 55,
+               minHeight: 100,
                alignment: .center)
         .background(color())
+        .onTapGesture {
+            print("just clicked card \(number)")
+        }
+        .clipShape(Capsule())
     }
 }
 
