@@ -106,3 +106,7 @@ ScreenModel(
     ]
 ) 
 ```
+
+To make this passage are used some auxiliary codable structs. They are related to each depth of the final object and segregate different processes, turning `JSON` raw text of the response into codable objects and turning these into a useful model.
+
+These objects are on the [Coders Group](./SDUI/Coders/) and, except for the [ScrreenCoder](./SDUI/SDUI/Coders/ScreenCoder.swift), are weakly linked by the correspondent _ID_.
