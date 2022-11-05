@@ -32,7 +32,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
 
     static let provider = Provider()
-    static let viewModel = SDUIViewModel(initalRoute: .init(rawValue: "um-detail"),
+    static let viewModel = SDUIViewModel(initalRoute: .init(rawValue: "lista"),
                                          provider: provider,
                                          linker: SampleLinker())
 
