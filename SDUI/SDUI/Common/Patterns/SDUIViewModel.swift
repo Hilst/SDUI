@@ -98,10 +98,12 @@ public extension SDUIViewModel {
 public extension SDUIViewModel {
     func goto(route: Route) {
         router.goto(route: route)
+        self.send(event: .react)
     }
 
     func goBack() {
         router.goBack()
+        self.send(event: .react)
     }
 }
 
