@@ -21,6 +21,8 @@ final class SampleLinker: Linker {
             return Card(model: model)
         case .header:
             return Header(model: model)
+        case .detail:
+            return Detail(model: model)
         default:
             return Card(model: model)
         }

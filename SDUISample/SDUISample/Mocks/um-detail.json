@@ -1,0 +1,51 @@
+{
+    "screenName": "um-detail",
+    "templates": [
+        {
+            "id": "header-template",
+            "type": "header",
+            "order": 1,
+            "componentsId": [
+                "header-component"
+            ]
+        },
+        {
+            "id": "detail-template",
+            "type": "detail",
+            "order": 2,
+            "componentsId": [
+                "detail-component"
+            ]
+        }
+    ],
+    "components": [
+        {
+            "id": "header-component",
+            "type": "header",
+            "bodyId": "header",
+            "order": 1
+        },
+        {
+            "id": "detail-component",
+            "type": "detail",
+            "bodyId": "first",
+            "order": 1
+        }
+    ],
+    "bodies": [
+        {
+            "id": "header",
+            "body": {
+                "nome": "UM",
+                "hasBackButton": "true"
+            }
+        },
+        {
+            "id": "first",
+            "body": {
+                "nome": "UM",
+                "numero": "1"
+            }
+        }
+    ]
+}

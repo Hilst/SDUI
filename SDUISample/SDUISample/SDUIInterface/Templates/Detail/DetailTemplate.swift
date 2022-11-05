@@ -1,8 +1,13 @@
-//
-//  DetailTemplate.swift
-//  SDUISample
-//
-//  Created by Felipe Hilst on 30/08/22.
-//
+import SDUI
+import SwiftUI
 
-import Foundation
+final class DetailTemplate: Template {
+
+    override func buildView() -> AnyView {
+        components.first?.view ?? EmptyView().toAnyView()
+    }
+}
+
+extension TemplateType {
+    static let detail = TemplateType(rawValue: "detail")
+}
