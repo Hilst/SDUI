@@ -5,6 +5,7 @@ final class Card: Component {
 
     private var name: String = ""
     private var number: Int = 0
+    private var detailRoute: String = ""
 
     override init(model: ComponentModel) {
         super.init(model: model)
@@ -12,8 +13,11 @@ final class Card: Component {
 
     override func load() {
         if populate() {
-            view = CardView(name: self.name,
-                            number: self.number).toAnyView()
+            var cardView = CardView(name: self.name,
+                            number: self.number,
+                            detailRoute: self.detailRoute)
+            cardView.delegate = self
+            view = cardView.toAnyView()
             return
         }
 
@@ -21,7 +25,7 @@ final class Card: Component {
     }
 
     private func populate() -> Bool {
-        var populated: [Bool] = Array(repeating: false, count: 2)
+        var populated: [Bool] = Array(repeating: false, count: 3)
         let data = model.body.data
 
         if let name = data[CardKeys.name.rawValue] {
@@ -37,7 +41,18 @@ final class Card: Component {
             populated[1] = true
         }
 
+        if let name = data[CardKeys.detailRoute.rawValue] {
+            self.detailRoute = name
+            populated[2] = true
+        }
+
         return populated.reduce(true) { $0 && $1 }
+    }
+}
+
+extension Card: CardDelegate {
+    func goto(detail: String) {
+        self.viewModel?.goto(route: Route(rawValue: detail))
     }
 }
 
@@ -48,4 +63,5 @@ extension ComponentType {
 enum CardKeys: String {
     case name = "nome"
     case number = "numero"
+    case detailRoute = "detailRoute"
 }

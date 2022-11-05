@@ -1,14 +1,21 @@
 import SwiftUI
 import SDUI
 
+protocol HeaderDelegate {
+    func goBack()
+}
+
 struct HeaderView: View {
 
     var name: String
     var hasBackButton: Bool
+    var delegate: HeaderDelegate?
 
     var body: some View {
         ZStack {
-            BackButtonView(condition: hasBackButton)
+            BackButtonView(condition: hasBackButton) {
+                delegate?.goBack()
+            }
             Text(name)
                 .bold()
                 .foregroundColor(.white)
@@ -23,14 +30,18 @@ struct HeaderView: View {
 private struct BackButtonView: View {
 
     var condition: Bool
+    var action: () -> Void
 
-    init(condition: Bool) { self.condition = condition }
+    init(condition: Bool, action: @escaping () -> ()) {
+        self.condition = condition
+        self.action = action
+    }
 
     var body: some View {
         if (condition) {
             HStack {
                 Button {
-                    print("back button pressed")
+                    action()
                 } label: {
                     Image(systemName: "chevron.left")
                         .foregroundColor(.white)

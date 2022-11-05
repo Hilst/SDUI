@@ -12,7 +12,10 @@ final class Header: Component {
 
     override func load() {
         if populate() {
-            view = HeaderView(name: self.name, hasBackButton: self.hasBackButton).toAnyView()
+            var headerView = HeaderView(name: self.name,
+                              hasBackButton: self.hasBackButton)
+            headerView.delegate = self
+            view = headerView.toAnyView()
             return
         }
 
@@ -36,6 +39,12 @@ final class Header: Component {
         }
 
         return populated.reduce(true) { $0 && $1 }
+    }
+}
+
+extension Header: HeaderDelegate {
+    func goBack() {
+        self.viewModel?.goBack()
     }
 }
 
