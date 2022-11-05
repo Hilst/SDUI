@@ -8,6 +8,7 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             self.content
+            Spacer(minLength: 0)
         }
     }
 

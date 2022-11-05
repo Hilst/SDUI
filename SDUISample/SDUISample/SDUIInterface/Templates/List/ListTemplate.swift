@@ -6,7 +6,9 @@ final class ListTemplate: Template {
     override func buildView() -> AnyView {
         List(components, id: \.id) { component in
             component.view
-        }.toAnyView()
+        }
+        .listStyle(.sidebar)
+        .toAnyView()
     }
 }
 

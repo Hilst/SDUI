@@ -24,6 +24,10 @@
 		12E3C8832847AA8D00E7F06E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8822847AA8D00E7F06E /* Provider.swift */; };
 		12E3C8912848401000E7F06E /* lista.json in Resources */ = {isa = PBXBuildFile; fileRef = 12E3C8902848401000E7F06E /* lista.json */; };
 		12E3C8982848453600E7F06E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3C8972848453600E7F06E /* HeaderView.swift */; };
+		12EAEF9E28BE5B70005E4515 /* um-detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 12EAEF9D28BE5B70005E4515 /* um-detail.json */; };
+		12EAEFA128BE5BF6005E4515 /* DetailTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EAEFA028BE5BF6005E4515 /* DetailTemplate.swift */; };
+		12EAEFA528BE5C57005E4515 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EAEFA428BE5C57005E4515 /* Detail.swift */; };
+		12EAEFA728BE5EA0005E4515 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EAEFA628BE5EA0005E4515 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +62,10 @@
 		12E3C8822847AA8D00E7F06E /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		12E3C8902848401000E7F06E /* lista.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lista.json; sourceTree = "<group>"; };
 		12E3C8972848453600E7F06E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		12EAEF9D28BE5B70005E4515 /* um-detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "um-detail.json"; sourceTree = "<group>"; };
+		12EAEFA028BE5BF6005E4515 /* DetailTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTemplate.swift; sourceTree = "<group>"; };
+		12EAEFA428BE5C57005E4515 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		12EAEFA628BE5EA0005E4515 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				12E3C8902848401000E7F06E /* lista.json */,
+				12EAEF9D28BE5B70005E4515 /* um-detail.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 		12E3C8922848428F00E7F06E /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				12EAEF9F28BE5BBE005E4515 /* Detail */,
 				120FBC35284E670F0032C921 /* List */,
 				12E24F03284E4C49005E14EC /* Header */,
 			);
@@ -192,6 +202,7 @@
 		12E3C8932848429600E7F06E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				12EAEFA328BE5C41005E4515 /* Detail */,
 				12E24EFE284E4796005E14EC /* Card */,
 				12E3C8962848452300E7F06E /* Header */,
 			);
@@ -205,6 +216,23 @@
 				12E3C8972848453600E7F06E /* HeaderView.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		12EAEF9F28BE5BBE005E4515 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				12EAEFA028BE5BF6005E4515 /* DetailTemplate.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		12EAEFA328BE5C41005E4515 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				12EAEFA428BE5C57005E4515 /* Detail.swift */,
+				12EAEFA628BE5EA0005E4515 /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12EAEF9E28BE5B70005E4515 /* um-detail.json in Resources */,
 				12E3C8912848401000E7F06E /* lista.json in Resources */,
 				12E3C7FF2847A20100E7F06E /* Preview Assets.xcassets in Resources */,
 				12E3C7FC2847A20100E7F06E /* Assets.xcassets in Resources */,
@@ -286,10 +315,13 @@
 				12913A61285438D6001EA6DA /* Header.swift in Sources */,
 				12E24F05284E4C61005E14EC /* HeaderTemplate.swift in Sources */,
 				12DF35E2285184A6001F67E2 /* ErrorView.swift in Sources */,
+				12EAEFA128BE5BF6005E4515 /* DetailTemplate.swift in Sources */,
+				12EAEFA528BE5C57005E4515 /* Detail.swift in Sources */,
 				12E3C7FA2847A20000E7F06E /* ContentView.swift in Sources */,
 				12E3C8832847AA8D00E7F06E /* Provider.swift in Sources */,
 				12E3C7F82847A20000E7F06E /* SDUISampleApp.swift in Sources */,
 				12DF35E028518485001F67E2 /* LoadingView.swift in Sources */,
+				12EAEFA728BE5EA0005E4515 /* DetailView.swift in Sources */,
 				12913A5F285431C4001EA6DA /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

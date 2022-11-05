@@ -5,7 +5,7 @@ open class Component {
 
     public let model: ComponentModel
 
-    weak var viewModel: SDUIViewModel?
+    public weak var viewModel: SDUIViewModel?
     public var view: AnyView!
 
     public init(model: ComponentModel) {

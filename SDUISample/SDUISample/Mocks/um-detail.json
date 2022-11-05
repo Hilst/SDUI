@@ -1,5 +1,5 @@
 {
-    "screenName": "lista",
+    "screenName": "um-detail",
     "templates": [
         {
             "id": "header-template",
@@ -10,11 +10,11 @@
             ]
         },
         {
-            "id": "lista-template",
-            "type": "list",
+            "id": "detail-template",
+            "type": "detail",
             "order": 2,
             "componentsId": [
-                "card-component-first",
+                "detail-component"
             ]
         }
     ],
@@ -26,8 +26,8 @@
             "order": 1
         },
         {
-            "id": "card-component-first",
-            "type": "card",
+            "id": "detail-component",
+            "type": "detail",
             "bodyId": "first",
             "order": 1
         }
@@ -36,16 +36,15 @@
         {
             "id": "header",
             "body": {
-                "nome": "HOME",
-                "hasBackButton": "false"
+                "nome": "UM",
+                "hasBackButton": "true"
             }
         },
         {
             "id": "first",
             "body": {
                 "nome": "UM",
-                "numero": "1",
-                "detailRoute": "um-detail"
+                "numero": "1"
             }
         }
     ]
