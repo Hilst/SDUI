@@ -4,6 +4,7 @@ import SwiftUI
 final class Header: Component {
 
     private var name: String = ""
+    private var hasBackButton: Bool = true
 
     override init(model: ComponentModel) {
         super.init(model: model)
@@ -11,7 +12,7 @@ final class Header: Component {
 
     override func load() {
         if populate() {
-            view = HeaderView(name: self.name).toAnyView()
+            view = HeaderView(name: self.name, hasBackButton: self.hasBackButton).toAnyView()
             return
         }
 
@@ -19,15 +20,22 @@ final class Header: Component {
     }
 
     private func populate() -> Bool {
-        var populated = false
+        var populated = Array(repeating: false, count: 2)
         let data = model.body.data
 
         if let name = data[HeaderKeys.name.rawValue] {
             self.name = name
-            populated = true
+            populated[0] = true
+        }
+        if
+            let hasBackButton = data[HeaderKeys.hasBackButton.rawValue],
+            let boolean = Bool(hasBackButton)
+        {
+            self.hasBackButton = boolean
+            populated[1] = true
         }
 
-        return populated
+        return populated.reduce(true) { $0 && $1 }
     }
 }
 
@@ -37,4 +45,5 @@ extension ComponentType {
 
 enum HeaderKeys: String {
     case name = "nome"
+    case hasBackButton = "hasBackButton"
 }

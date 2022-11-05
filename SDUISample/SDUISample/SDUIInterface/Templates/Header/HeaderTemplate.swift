@@ -4,7 +4,9 @@ import SwiftUI
 final class HeaderTemplate: Template {
 
     override func buildView() -> AnyView {
-        components.first?.view ?? EmptyView().toAnyView()
+        ZStack(alignment: .top) {
+            components.first?.view ?? EmptyView().toAnyView()
+        }.toAnyView()
     }
 }
 
