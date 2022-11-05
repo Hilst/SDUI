@@ -21,12 +21,12 @@ final class Card: Component {
     }
 
     private func populate() -> Bool {
-        var populated = false
+        var populated: [Bool] = Array(repeating: false, count: 2)
         let data = model.body.data
 
         if let name = data[CardKeys.name.rawValue] {
             self.name = name
-            populated = true
+            populated[0] = true
         }
 
         if
@@ -34,10 +34,10 @@ final class Card: Component {
             let integer = Int(number)
         {
             self.number = integer
-            populated = true
+            populated[1] = true
         }
 
-        return populated
+        return populated.reduce(true) { $0 && $1 }
     }
 }
 
