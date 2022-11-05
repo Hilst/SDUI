@@ -23,7 +23,6 @@ struct CardView: View {
         .onTapGesture {
             print("just clicked card \(number)")
         }
-        .clipShape(Capsule())
     }
 }
 

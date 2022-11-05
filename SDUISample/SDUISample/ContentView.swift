@@ -8,6 +8,7 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             self.content
+            Spacer(minLength: 0)
         }
     }
 
@@ -31,7 +32,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
 
     static let provider = Provider()
-    static let viewModel = SDUIViewModel(initalRoute: .init(rawValue: "lista"),
+    static let viewModel = SDUIViewModel(initalRoute: .init(rawValue: "um-detail"),
                                          provider: provider,
                                          linker: SampleLinker())
 
