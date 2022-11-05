@@ -15,9 +15,6 @@
             "order": 2,
             "componentsId": [
                 "card-component-first",
-                "card-component-second",
-                "card-component-third",
-                "card-component-fourth"
             ]
         }
     ],
@@ -33,59 +30,22 @@
             "type": "card",
             "bodyId": "first",
             "order": 1
-        },
-        {
-            "id": "card-component-second",
-            "type": "card",
-            "bodyId": "second",
-            "order": 2
-        },
-        {
-            "id": "card-component-third",
-            "type": "card",
-            "bodyId": "third",
-            "order": 3
-        },
-        {
-            "id": "card-component-fourth",
-            "type": "card",
-            "bodyId": "fourth",
-            "order": 4
         }
     ],
     "bodies": [
         {
             "id": "header",
             "body": {
-                "nome": "HOME"
+                "nome": "HOME",
+                "hasBackButton": "false"
             }
         },
         {
             "id": "first",
             "body": {
                 "nome": "UM",
-                "numero": "1"
-            }
-        },
-        {
-            "id": "second",
-            "body": {
-                "nome": "DOIS",
-                "numero": "2"
-            }
-        },
-        {
-            "id": "third",
-            "body": {
-                "nome": "TRES",
-                "numero": "3"
-            }
-        },
-        {
-            "id": "fourth",
-            "body": {
-                "nome": "QUATRO",
-                "numero": "4"
+                "numero": "1",
+                "detailRoute": "um-detail"
             }
         }
     ]
