@@ -23,6 +23,7 @@ public final class SDUIViewModel: ObservableObject {
     private let router: Router
     private let service: Service
     private let linker: SDUILinker
+    private let actionsManager: SDUIActionsManager
     private let screen: Screen
     private var screenModel: ScreenModel?
 
@@ -38,14 +39,21 @@ public final class SDUIViewModel: ObservableObject {
         self.router = Router(initialRoute: initalRoute)
         self.service = Service(provider: provider)
         self.linker = linker
+        self.actionsManager = SDUIActionsManager()
 
         self.screen = Screen()
-        screen.viewModel = self
         screen.linker = linker
 
         self.stateCancellable = stateMachine.statePublisher.sink { state in
             self.state = state
         }
+
+        endConfiguration()
+    }
+
+    private func endConfiguration() {
+        screen.viewModel = self
+        actionsManager.viewModel = self
 
         stateMachine.tryEvent(.initiate)
     }
@@ -104,6 +112,13 @@ public extension SDUIViewModel {
     func goBack() {
         router.goBack()
         self.send(event: .react)
+    }
+}
+
+// MARK: - ACTIONS
+public extension SDUIViewModel {
+    func performActionFromManager(withSignature signature: String, andParameter parameter: Any? = nil) {
+        actionsManager.performAction(withSignature: signature, andParameter: parameter)
     }
 }
 

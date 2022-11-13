@@ -3,13 +3,13 @@ import Foundation
 @objc
 public final class SDUIActionsManager: NSObject {
 
-    private weak var viewModel: SDUIViewModel?
+    public weak var viewModel: SDUIViewModel?
 
     public enum SDUIActionsErrors: Error {
         case invalidActionSignature(String)
     }
 
-    public func performAction(withSignature signature: String, andParameter parameter: Any? = nil) {
+    internal func performAction(withSignature signature: String, andParameter parameter: Any? = nil) {
         var selector: Selector!
 
         do {
