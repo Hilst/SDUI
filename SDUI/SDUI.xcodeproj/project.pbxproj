@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		120FBC32284E55250032C921 /* Linker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120FBC31284E55250032C921 /* Linker.swift */; };
+		120FBC32284E55250032C921 /* SDUILinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120FBC31284E55250032C921 /* SDUILinker.swift */; };
 		12272631285544540041B121 /* SDUIViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12272630285544540041B121 /* SDUIViewModelTest.swift */; };
 		122726352855466D0041B121 /* LinkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122726342855466D0041B121 /* LinkerMock.swift */; };
 		1227263F285548C20041B121 /* service-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1227263E285548C20041B121 /* service-test.json */; };
@@ -15,6 +15,8 @@
 		12272648285575720041B121 /* view-model-load-failure-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 12272647285575720041B121 /* view-model-load-failure-test.json */; };
 		1227264B285581BB0041B121 /* TemplateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227264A285581BB0041B121 /* TemplateTest.swift */; };
 		12537E492884994300AAB6C6 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 12537E482884994300AAB6C6 /* ViewInspector */; };
+		12615D40291E948B0037CD1B /* SDUIActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12615D3F291E948B0037CD1B /* SDUIActionsManager.swift */; };
+		12615D42291EAC7B0037CD1B /* SDUIActionsManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12615D41291EAC7B0037CD1B /* SDUIActionsManagerTest.swift */; };
 		128E904A285244AE0001BB6E /* SDUIStateMachineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */; };
 		12DF35DD28517A2C001F67E2 /* SDUIStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */; };
 		12DF35E42851937E001F67E2 /* ViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35E32851937E001F67E2 /* ViewTest.swift */; };
@@ -64,13 +66,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		120FBC31284E55250032C921 /* Linker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linker.swift; sourceTree = "<group>"; };
+		120FBC31284E55250032C921 /* SDUILinker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUILinker.swift; sourceTree = "<group>"; };
 		12272630285544540041B121 /* SDUIViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIViewModelTest.swift; sourceTree = "<group>"; };
 		122726342855466D0041B121 /* LinkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerMock.swift; sourceTree = "<group>"; };
 		1227263E285548C20041B121 /* service-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "service-test.json"; sourceTree = "<group>"; };
 		1227264528556B2F0041B121 /* view-model-test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "view-model-test.json"; sourceTree = "<group>"; };
 		12272647285575720041B121 /* view-model-load-failure-test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "view-model-load-failure-test.json"; sourceTree = "<group>"; };
 		1227264A285581BB0041B121 /* TemplateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTest.swift; sourceTree = "<group>"; };
+		12615D3F291E948B0037CD1B /* SDUIActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIActionsManager.swift; sourceTree = "<group>"; };
+		12615D41291EAC7B0037CD1B /* SDUIActionsManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIActionsManagerTest.swift; sourceTree = "<group>"; };
 		128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIStateMachineTest.swift; sourceTree = "<group>"; };
 		12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIStateMachine.swift; sourceTree = "<group>"; };
 		12DF35E32851937E001F67E2 /* ViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTest.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 			children = (
 				12E3C8672847A4CC00E7F06E /* ScreenBuilderTest.swift */,
 				128E9049285244AE0001BB6E /* SDUIStateMachineTest.swift */,
+				12615D41291EAC7B0037CD1B /* SDUIActionsManagerTest.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -397,7 +402,6 @@
 				12E3C8312847A4B800E7F06E /* Screen.swift */,
 				12E3C8302847A4B800E7F06E /* Template.swift */,
 				12E3C8322847A4B800E7F06E /* Component.swift */,
-				120FBC31284E55250032C921 /* Linker.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -414,8 +418,10 @@
 		12E3C88B284830B500E7F06E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				120FBC31284E55250032C921 /* SDUILinker.swift */,
 				12E3C8362847A4B800E7F06E /* ScreenBuilder.swift */,
 				12DF35DC28517A2C001F67E2 /* SDUIStateMachine.swift */,
+				12615D3F291E948B0037CD1B /* SDUIActionsManager.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -485,7 +491,7 @@
 				TargetAttributes = {
 					12E3C80E2847A21800E7F06E = {
 						CreatedOnToolsVersion = 13.4;
-						LastSwiftMigration = 1340;
+						LastSwiftMigration = 1410;
 					};
 					12E3C81C2847A22F00E7F06E = {
 						CreatedOnToolsVersion = 13.4;
@@ -541,7 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				120FBC32284E55250032C921 /* Linker.swift in Sources */,
+				120FBC32284E55250032C921 /* SDUILinker.swift in Sources */,
 				12E3C8502847A4B800E7F06E /* ScreenBuilder.swift in Sources */,
 				12E3C85D2847A4B800E7F06E /* ComponentCoder.swift in Sources */,
 				12E3C85E2847A4B800E7F06E /* ScreenCoder.swift in Sources */,
@@ -550,6 +556,7 @@
 				12E3C8542847A4B800E7F06E /* ComponentModel.swift in Sources */,
 				12E3C8582847A4B800E7F06E /* Stack.swift in Sources */,
 				12E3C85C2847A4B800E7F06E /* BodyCoder.swift in Sources */,
+				12615D40291E948B0037CD1B /* SDUIActionsManager.swift in Sources */,
 				12E3C85A2847A4B800E7F06E /* Route.swift in Sources */,
 				12E3C88628482D5500E7F06E /* SDUIViewModel.swift in Sources */,
 				12E3C84F2847A4B800E7F06E /* ScreenLogger.swift in Sources */,
@@ -581,6 +588,7 @@
 				12E3C87A2847A4CC00E7F06E /* ProviderMock.swift in Sources */,
 				12E3C8762847A4CC00E7F06E /* ScreenBuilderTest.swift in Sources */,
 				12E3C8732847A4CC00E7F06E /* StackTests.swift in Sources */,
+				12615D42291EAC7B0037CD1B /* SDUIActionsManagerTest.swift in Sources */,
 				122726352855466D0041B121 /* LinkerMock.swift in Sources */,
 				12E3C8782847A4CC00E7F06E /* RouterTest.swift in Sources */,
 				12E3C8752847A4CC00E7F06E /* ServiceTest.swift in Sources */,

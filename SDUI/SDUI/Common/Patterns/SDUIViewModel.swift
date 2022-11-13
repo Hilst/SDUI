@@ -22,14 +22,14 @@ public final class SDUIViewModel: ObservableObject {
     // MARK: - BUSINESS PROP
     private let router: Router
     private let service: Service
-    private let linker: Linker
+    private let linker: SDUILinker
     private let screen: Screen
     private var screenModel: ScreenModel?
 
     // MARK: - INITIALIZER
     public init(initalRoute: Route,
          provider: ProviderProtocol,
-         linker: Linker,
+         linker: SDUILinker,
          stateMachine: SDUIStateMachine = SDUIStateMachine(initialState: .start)) {
         
         self.stateMachine = stateMachine

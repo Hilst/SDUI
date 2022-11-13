@@ -6,7 +6,7 @@ open class Template {
     private let model: TemplateModel
     public var components: [Component] = []
 
-    public weak var linker: Linker?
+    public weak var linker: SDUILinker?
     public weak var viewModel: SDUIViewModel?
     public var view: AnyView!
 

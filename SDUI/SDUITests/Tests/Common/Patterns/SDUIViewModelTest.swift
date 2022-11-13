@@ -5,7 +5,7 @@ class SDUIViewModelTest: XCTestCase {
 
     var sut: SDUIViewModel!
     var provider: ProviderMock!
-    var linker: Linker!
+    var linker: SDUILinker!
     var stateMachine: SDUIStateMachine!
 
     override func setUp() {

@@ -2,7 +2,7 @@ import Foundation
 import SDUI
 import SwiftUI
 
-final class SampleLinker: Linker {
+final class SampleLinker: SDUILinker {
 
     func initializer(for model: TemplateModel) -> Template {
         switch model.type {
