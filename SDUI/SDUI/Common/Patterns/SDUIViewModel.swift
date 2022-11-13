@@ -120,6 +120,10 @@ public extension SDUIViewModel {
     func performActionFromManager(withSignature signature: String, andParameter parameter: Any? = nil) {
         actionsManager.performAction(withSignature: signature, andParameter: parameter)
     }
+
+    func logAllMethodsAvaibleOnManager(with regex: String = "") {
+        actionsManager.logAllMethodsAvaible(with: regex)
+    }
 }
 
 // MARK: - FETCHING

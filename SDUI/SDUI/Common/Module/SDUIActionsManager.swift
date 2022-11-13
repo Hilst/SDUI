@@ -1,7 +1,13 @@
 import Foundation
 
+internal protocol SDUIActionsManagerProtocol {
+    var viewModel: SDUIViewModel? { get set }
+
+    func performAction(withSignature signature: String, andParameter parameter: Any?)
+}
+
 @objc
-public final class SDUIActionsManager: NSObject {
+public final class SDUIActionsManager: NSObject, SDUIActionsManagerProtocol {
 
     public weak var viewModel: SDUIViewModel?
 
@@ -34,7 +40,7 @@ public final class SDUIActionsManager: NSObject {
         }
     }
 
-    public func logAllMethodsAvaible(with regex: String = "") {
+    internal func logAllMethodsAvaible(with regex: String = "") {
         var count: UInt32 = 0
         guard
             let methods: UnsafeMutablePointer<Method> = class_copyMethodList(object_getClass(self), &count),
