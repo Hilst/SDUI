@@ -9,6 +9,7 @@ class SDUIActionsManagerTest: XCTestCase {
         super.setUp()
         sut = SDUIActionsManager()
         sut.logAllMethodsAvaible()
+        sut.logAllMethodsAvaible(with: "parameter")
         SPY.reset()
     }
 
@@ -16,14 +17,14 @@ class SDUIActionsManagerTest: XCTestCase {
         sut = nil
     }
 
-    func test_call_without_parameter() throws {
+    func test_call_without_parameter() {
         XCTAssertEqual(SPY.integer, 0)
 
         sut.performAction(withSignature: "function")
         XCTAssertEqual(SPY.integer, 1)
     }
 
-    func test_call_with_single_parameter() throws {
+    func test_call_with_parameter() {
         XCTAssertEqual(SPY.integer, 0)
 
         sut.performAction(withSignature: "functionWithParameter:", andParameter: 2)
@@ -42,18 +43,5 @@ extension SDUIActionsManager {
     public func function(parameter: NSNumber) {
         let increment = parameter.intValue
         SPY.add(increment)
-    }
-}
-
-class SPY {
-
-    private(set) static var integer: Int = 0
-
-    public static func reset() {
-        integer = 0
-    }
-
-    public static func add(_ more: NSInteger = 0) {
-        integer += more
     }
 }
