@@ -30,6 +30,13 @@ class SDUIActionsManagerTest: XCTestCase {
         sut.performAction(withSignature: "functionWithParameter:", andParameter: 2)
         XCTAssertEqual(SPY.integer, 2)
     }
+
+    func test_call_invalid_parameter() {
+        XCTAssertEqual(SPY.integer, 0)
+
+        sut.performAction(withSignature: "asdfg")
+        XCTAssertEqual(SPY.integer, 0)
+    }
 }
 
 extension SDUIActionsManager {

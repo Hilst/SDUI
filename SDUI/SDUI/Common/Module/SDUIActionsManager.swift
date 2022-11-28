@@ -24,20 +24,18 @@ public final class SDUIActionsManager: NSObject, SDUIActionsManagerProtocol {
             print("\n// =============================== //")
             print("There is no method with the following signature: \(signature)")
             print("\n// =============================== //\n")
+
+            return
         } catch {
             print("\n// =============================== //")
             print("There was a error processing the following signature: \(signature)")
             print("\n// =============================== //\n")
+            
+            return
         }
 
-        if
-            selector != nil,
-            let parameter: Any = parameter
-        {
-            self.perform(selector, with: parameter.self)
-        } else {
-            self.perform(selector)
-        }
+        if let parameter: Any = parameter { self.perform(selector, with: parameter.self) }
+        else { self.perform(selector) }
     }
 
     internal func logAllMethodsAvaible(with regex: String = "") {
