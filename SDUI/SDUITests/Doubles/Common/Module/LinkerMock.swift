@@ -2,7 +2,7 @@ import SwiftUI
 import SDUI
 import ViewInspector
 
-final class LinkerMock: Linker {
+final class LinkerMock: SDUILinker {
     func initializer(for model: TemplateModel) -> Template {
         TemplateLinked(model: model)
     }

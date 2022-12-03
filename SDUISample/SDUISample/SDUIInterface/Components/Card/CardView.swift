@@ -1,15 +1,10 @@
 import SwiftUI
 import SDUI
 
-protocol CardDelegate {
-    func goto(detail: String)
-}
-
 struct CardView: View {
 
     var name: String
     var number: Int
-    var detailRoute: String
     var delegate: CardDelegate?
 
     var body: some View {
@@ -27,7 +22,7 @@ struct CardView: View {
                alignment: .center)
         .background(color())
         .onTapGesture {
-            delegate?.goto(detail: detailRoute)
+            delegate?.performAction()
         }
     }
 }
@@ -50,11 +45,11 @@ extension CardView {
 struct CardView_Previews: PreviewProvider {
 
     static var previews: some View {
-        CardView(name: "TEST CARD", number: 1, detailRoute: "")
+        CardView(name: "TEST CARD", number: 1)
             .previewLayout(.sizeThatFits)
-        CardView(name: "TEST CARD", number: 2, detailRoute: "")
+        CardView(name: "TEST CARD", number: 2)
             .previewLayout(.sizeThatFits)
-        CardView(name: "TEST CARD", number: 3, detailRoute: "")
+        CardView(name: "TEST CARD", number: 3)
             .previewLayout(.sizeThatFits)
     }
 }

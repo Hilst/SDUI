@@ -5,7 +5,7 @@ class SDUIViewModelTest: XCTestCase {
 
     var sut: SDUIViewModel!
     var provider: ProviderMock!
-    var linker: Linker!
+    var linker: SDUILinker!
     var stateMachine: SDUIStateMachine!
 
     override func setUp() {
@@ -17,6 +17,8 @@ class SDUIViewModelTest: XCTestCase {
                             provider: provider,
                             linker: linker,
                             stateMachine: stateMachine)
+
+        sut.logAllMethodsAvaibleOnManager()
     }
 
     override func tearDown() {
@@ -63,5 +65,10 @@ class SDUIViewModelTest: XCTestCase {
         XCTAssertEqual(sut.route.rawValue, "view-model-test")
     }
 
-
+    func test_perform_action() {
+        SPY.reset()
+        XCTAssertEqual(SPY.integer, 0)
+        sut.performActionFromManager(withSignature: "function")
+        XCTAssertEqual(SPY.integer, 1)
+    }
 }

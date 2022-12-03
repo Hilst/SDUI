@@ -5,7 +5,7 @@ public final class Screen {
     public var templates = [Template]()
 
     weak var viewModel: SDUIViewModel?
-    weak var linker: Linker?
+    weak var linker: SDUILinker?
 
     func load(model: ScreenModel) {
         templates = []

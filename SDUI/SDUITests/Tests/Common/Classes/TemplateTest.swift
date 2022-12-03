@@ -6,7 +6,7 @@ import ViewInspector
 class TemplateTest: XCTestCase {
 
     var sut: Template!
-    var linker: Linker!
+    var linker: SDUILinker!
 
     override func setUp() {
         linker = LinkerMock()
