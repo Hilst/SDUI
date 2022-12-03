@@ -11,6 +11,7 @@
 		120FBC37284E67220032C921 /* ListTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120FBC36284E67220032C921 /* ListTemplate.swift */; };
 		12913A5F285431C4001EA6DA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12913A5E285431C4001EA6DA /* Card.swift */; };
 		12913A61285438D6001EA6DA /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12913A60285438D6001EA6DA /* Header.swift */; };
+		12D5C372293C053D00CB4275 /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D5C371293C053D00CB4275 /* CardAction.swift */; };
 		12DF35E028518485001F67E2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35DF28518485001F67E2 /* LoadingView.swift */; };
 		12DF35E2285184A6001F67E2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF35E1285184A6001F67E2 /* ErrorView.swift */; };
 		12E24F02284E48D0005E14EC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E24F01284E48D0005E14EC /* CardView.swift */; };
@@ -49,6 +50,7 @@
 		120FBC36284E67220032C921 /* ListTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTemplate.swift; sourceTree = "<group>"; };
 		12913A5E285431C4001EA6DA /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		12913A60285438D6001EA6DA /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		12D5C371293C053D00CB4275 /* CardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAction.swift; sourceTree = "<group>"; };
 		12DF35DF28518485001F67E2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		12DF35E1285184A6001F67E2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		12E24F01284E48D0005E14EC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				12913A5E285431C4001EA6DA /* Card.swift */,
 				12E24F01284E48D0005E14EC /* CardView.swift */,
+				12D5C371293C053D00CB4275 /* CardAction.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				120FBC34284E55CD0032C921 /* SampleLinker.swift in Sources */,
 				12E24F02284E48D0005E14EC /* CardView.swift in Sources */,
 				12E3C8982848453600E7F06E /* HeaderView.swift in Sources */,
+				12D5C372293C053D00CB4275 /* CardAction.swift in Sources */,
 				120FBC37284E67220032C921 /* ListTemplate.swift in Sources */,
 				12913A61285438D6001EA6DA /* Header.swift in Sources */,
 				12E24F05284E4C61005E14EC /* HeaderTemplate.swift in Sources */,

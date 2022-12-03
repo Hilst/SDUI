@@ -24,13 +24,12 @@ public final class SDUIActionsManager: NSObject, SDUIActionsManagerProtocol {
             print("\n// =============================== //")
             print("There is no method with the following signature: \(signature)")
             print("\n// =============================== //\n")
-
+            logAllMethodsAvaible()
             return
         } catch {
             print("\n// =============================== //")
             print("There was a error processing the following signature: \(signature)")
             print("\n// =============================== //\n")
-            
             return
         }
 
@@ -63,10 +62,8 @@ public final class SDUIActionsManager: NSObject, SDUIActionsManagerProtocol {
     }
 
     private func isValidSignature(_ signature: String) -> Bool {
-        guard (["init", ".cxx_destruct"].contains(signature)) else {
-            return true
-        }
-        return false
+        if (["init", ".cxx_destruct"].contains(signature)) { return false }
+        return true
     }
 
     private func containRegex(_ content: String, regex: String) -> Bool {

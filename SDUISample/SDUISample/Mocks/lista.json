@@ -45,7 +45,8 @@
             "body": {
                 "nome": "UM",
                 "numero": "1",
-                "detailRoute": "um-detail"
+                "actionSignature": "gotoWithDetail:",
+                "actionBody": "um-detail"
             }
         }
     ]

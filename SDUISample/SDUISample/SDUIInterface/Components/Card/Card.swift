@@ -5,7 +5,8 @@ final class Card: Component {
 
     private var name: String = ""
     private var number: Int = 0
-    private var detailRoute: String = ""
+    private var actionSignature: String = ""
+    private var actionParameter: Any? = nil
 
     override init(model: ComponentModel) {
         super.init(model: model)
@@ -14,8 +15,7 @@ final class Card: Component {
     override func load() {
         if populate() {
             var cardView = CardView(name: self.name,
-                            number: self.number,
-                            detailRoute: self.detailRoute)
+                            number: self.number)
             cardView.delegate = self
             view = cardView.toAnyView()
             return
@@ -25,7 +25,7 @@ final class Card: Component {
     }
 
     private func populate() -> Bool {
-        var populated: [Bool] = Array(repeating: false, count: 3)
+        var populated: [Bool] = Array(repeating: false, count: CardKeys.allCases.count)
         let data = model.body.data
 
         if let name = data[CardKeys.name.rawValue] {
@@ -41,18 +41,27 @@ final class Card: Component {
             populated[1] = true
         }
 
-        if let name = data[CardKeys.detailRoute.rawValue] {
-            self.detailRoute = name
+        if let signature = data[CardKeys.actionSignature.rawValue] {
+            self.actionSignature = signature
             populated[2] = true
+        }
+
+        if let parameter = data[CardKeys.actionParameter.rawValue] {
+            self.actionParameter = parameter
+            populated[3] = true
         }
 
         return populated.reduce(true) { $0 && $1 }
     }
 }
 
+protocol CardDelegate {
+    func performAction()
+}
+
 extension Card: CardDelegate {
-    func goto(detail: String) {
-        self.viewModel?.goto(route: Route(rawValue: detail))
+    func performAction() {
+        self.viewModel?.performActionFromManager(withSignature: actionSignature, andParameter: actionParameter)
     }
 }
 
@@ -60,8 +69,9 @@ extension ComponentType {
     static let card = ComponentType(rawValue: "card")
 }
 
-enum CardKeys: String {
+enum CardKeys: String, CaseIterable {
     case name = "nome"
     case number = "numero"
-    case detailRoute = "detailRoute"
+    case actionSignature = "actionSignature"
+    case actionParameter = "actionBody"
 }
