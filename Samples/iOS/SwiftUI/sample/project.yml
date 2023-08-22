@@ -1,0 +1,31 @@
+name: sample
+
+options:
+  bundleIdPrefix: com.$(USER).sdui.sample.ios.swiftui
+  preGenCommand: "echo 'removing project' && rm -rf sample.xcodeproj"
+
+targets:
+  sample:
+    type: application
+    platform: iOS
+    sources: 
+      - sample
+    settings:
+      base:
+        ENABLE_PREVIEWS: YES
+        DEVELOPMENT_ASSET_PATHS: "\"sample/Preview Content\""
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    info:
+      path: sample/Info.plist
+      properties:
+        LSRequiresIPhoneOS: YES
+        UILaunchScreen: ""
+        UIApplicationSupportsIndirectInputEvents: YES
+        UIApplicationSceneManifest: 
+          UIApplicationSupportsMultipleScenes: YES
+    dependencies:
+      - package: SDUI
+
+packages:
+  SDUI:
+    path: ../../../../SDUI
