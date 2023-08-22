@@ -4,13 +4,7 @@ import SDUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-						Button("TEST", action: {
-							print(SDUI().text)
-						})
+					Text(SDUI().text)
         }
         .padding()
     }
