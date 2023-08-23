@@ -1,0 +1,23 @@
+name: sample
+
+options:
+  bundleIdPrefix: "com.$(USER).sdui.sample.ios.uikit"
+  preGenCommand: "rm -rf sample.xcodeproj"
+  deploymentTarget: 
+    iOS: "16.0"
+
+packages:
+  SDUI:
+    path: ../../../../SDUI
+
+settings:
+  INFO_PLIST: sample/Info.plist
+
+targets:
+  sample:
+    type: application
+    platform: iOS
+    sources: 
+      - sample
+    dependencies:
+      - package: SDUI
