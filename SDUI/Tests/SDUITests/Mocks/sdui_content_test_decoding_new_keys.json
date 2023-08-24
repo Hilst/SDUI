@@ -1,0 +1,42 @@
+{
+	"a": "id-1",
+	"type": "type-1",
+	"data": "something",
+	"metadata": {
+		"meta": "meta-1",
+		"data": "1"
+	},
+	"child": [
+		{
+			"a": "id-1-1",
+			"type": "type-1-1",
+			"data": "something",
+			"metadata": {
+				"meta": "meta-1-1",
+				"data": "11"
+			},
+			"child": [
+				{
+					"a": "id-1-1-1",
+					"type": "type-1-1-1",
+					"data": "something",
+					"metadata": {
+						"meta": "meta-1-1-1",
+						"data": "111"
+					},
+					"child": []
+				}
+			]
+		},
+		{
+			"a": "id-1-2",
+			"type": "type-1-2",
+			"data": "something",
+			"metadata": {
+				"meta": "meta-1-2",
+				"data": "12"
+			},
+			"child": []
+		}
+	]
+}

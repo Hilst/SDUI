@@ -1,0 +1,44 @@
+{
+  "configurations" : [
+    {
+      "id" : "F6054873-8174-4F18-80FC-B1F73A97C2A8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "SDUI",
+          "name" : "SDUI"
+        },
+        {
+          "containerPath" : "container:",
+          "identifier" : "SDUIModels",
+          "name" : "SDUIModels"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:",
+      "identifier" : "SDUITests",
+      "name" : "SDUITests"
+    },
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "SDUITests",
+        "name" : "SDUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
