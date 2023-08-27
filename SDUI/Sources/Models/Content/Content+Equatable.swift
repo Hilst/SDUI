@@ -1,5 +1,4 @@
 import Foundation
-import SDUIModels
 
 extension Content: Equatable {
 	public static func == (lhs: SDUIModels.Content, rhs: SDUIModels.Content) -> Bool {

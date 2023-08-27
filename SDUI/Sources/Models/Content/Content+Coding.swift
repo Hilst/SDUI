@@ -9,8 +9,7 @@ extension Content {
 		}
 		public var intValue: Int?
 		public init?(intValue: Int) {
-			self.stringValue = "\(intValue)"
-			self.intValue = intValue
+			fatalError("NOT SUPPORTED")
 		}
 	}
 	public enum Coding: Int, CaseIterable {
