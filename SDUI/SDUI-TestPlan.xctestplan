@@ -20,6 +20,11 @@
           "containerPath" : "container:",
           "identifier" : "SDUIModels",
           "name" : "SDUIModels"
+        },
+        {
+          "containerPath" : "container:",
+          "identifier" : "SDUIStateMachine",
+          "name" : "SDUIStateMachine"
         }
       ]
     },
