@@ -15,16 +15,6 @@
           "containerPath" : "container:",
           "identifier" : "SDUI",
           "name" : "SDUI"
-        },
-        {
-          "containerPath" : "container:",
-          "identifier" : "SDUIModels",
-          "name" : "SDUIModels"
-        },
-        {
-          "containerPath" : "container:",
-          "identifier" : "SDUIStateMachine",
-          "name" : "SDUIStateMachine"
         }
       ]
     },

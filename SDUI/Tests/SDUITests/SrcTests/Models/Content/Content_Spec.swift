@@ -1,5 +1,5 @@
 import XCTest
-@testable import SDUIModels
+@testable import SDUI
 
 final class Content_Spec: XCTestCase {
 

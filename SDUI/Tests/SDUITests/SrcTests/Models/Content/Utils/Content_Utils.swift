@@ -1,14 +1,7 @@
 import Foundation
-import SDUIModels
+import SDUI
 
 struct Content_Utils {
-	// MARK: - FILES
-	private static let FILES: [String: String] = [
-		"test_decoding": "sdui_content_test_decoding",
-		"test_decoding_new_keys": "sdui_content_test_decoding_new_keys"
-	]
-
-
 	// MARK: - BUILD EXAMPLE
 	static func createSDUIContent(_ suffix: String) -> Content {
 		let c = Content()

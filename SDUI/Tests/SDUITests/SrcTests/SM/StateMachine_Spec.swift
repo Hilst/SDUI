@@ -1,33 +1,35 @@
 import XCTest
-import SDUIModels
-@testable import SDUIStateMachine
+@testable import SDUI
 
 final class StateMachine_Spec: XCTestCase {
-		override func setUp() {
-				super.setUp()
-				StateMachine.instance.reset()
-		}
 
-		func test_full_flux() {
-				XCTAssertEqual(StateMachine.instance.current, .idle)
+	var sut: StateMachine!
 
-				let req = URLRequest(url: URL(string: "https://example.com")!)
-				let data = Data()
-				let content = Content()
+	override func setUp() {
+		super.setUp()
+		sut = StateMachine()
+		sut.reset()
+	}
 
-				StateMachine.instance.send(event: .initiate(req))
-				XCTAssertEqual(StateMachine.instance.current, .fetching(req))
+	func test_full_flux() {
+		XCTAssertEqual(sut.current, .idle)
 
-				StateMachine.instance.send(event: .load(data))
-				XCTAssertEqual(StateMachine.instance.current, .loading(data))
+		let data = Data()
+		let content = Content()
 
-				StateMachine.instance.send(event: .render(content))
-				XCTAssertEqual(StateMachine.instance.current, .rendering(content))
+		sut.send(event: .initiate)
+		XCTAssertEqual(sut.current, .fetching)
 
-				StateMachine.instance.send(event: .done)
-				XCTAssertEqual(StateMachine.instance.current, .awaiting)
+		sut.send(event: .load(.success(data)))
+		XCTAssertEqual(sut.current, .loading(.success(data)))
 
-				StateMachine.instance.send(event: .action(req))
-				XCTAssertEqual(StateMachine.instance.current, .fetching(req))
-		}
+		sut.send(event: .render(.success(content)))
+		XCTAssertEqual(sut.current, .rendering(.success(content)))
+
+		sut.send(event: .done)
+		XCTAssertEqual(sut.current, .awaiting)
+
+		sut.send(event: .action)
+		XCTAssertEqual(sut.current, .fetching)
+	}
 }

@@ -1,7 +1,7 @@
 import Foundation
 
 extension Content: Equatable {
-	public static func == (lhs: SDUIModels.Content, rhs: SDUIModels.Content) -> Bool {
+	public static func == (lhs: Content, rhs: Content) -> Bool {
 		return (
 			lhs.id == rhs.id &&
 			lhs.type == rhs.type &&
